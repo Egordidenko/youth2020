@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="theme-color" content="#E3FDFD" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Title</title>
+<meta name="description" content="Description" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:title" content="Title" />
+<meta property="og:url" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Description" />
+<meta property="og:site_name" content="Title" />
+<meta property="og:image" content="social.jpg" />
+<meta property="og:image:alt" content="Title" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:url" content="social.jpg" />
+<meta property="og:image:secure_url" content="social.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Title" />
+<meta name="twitter:description" content="Description" />
+<meta name="twitter:image" content="social.jpg" />
+<link rel="image_src" href="social.jpg" />
+<link rel="icon" href="ico/32.png" type="image/x-icon" />
+<link rel="shortcut icon" href="ico/32.png" type="image/x-icon" />
+<link rel="apple-touch-icon" href="ico/1024.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="ico/76.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="ico/120.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="ico/152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="ico/180.png" />
+<!--		height-helper стоит высота 100vh, для того что бы на ios понимать какая высота у экрана без плашек, я использую так же эту высоту что бы не срабатывал ресайз при скролле на ios-->
+<style>
+  .height-helper {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+  	pointer-events: none;
+  	visibility: hidden;
+  }
+</style><!--		 Основной файл стилей, вебпак втавит сюда сам -->
+<link href="build/styles.css" rel="stylesheet"></head>
+<body>
+<div class="pw">
+<header class="header">
+  <div class="wrapper flex jcsb">
+    <div class="logo header__logo"><svg width="146" height="30" viewBox="0 0 146 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M140.958 8.47066V5.89511C140.964 5.46294 140.914 5.03182 140.81 4.61241C140.555 3.91516 140.081 3.84198 139.641 3.84198C139.202 3.84198 138.728 3.91516 138.473 4.61241C138.37 5.03208 138.321 5.46308 138.327 5.89511V24.0886C138.323 24.5212 138.372 24.9526 138.473 25.3734C138.571 25.602 138.735 25.7966 138.942 25.9334C139.15 26.0701 139.393 26.1429 139.641 26.1429C139.89 26.1429 140.133 26.0701 140.34 25.9334C140.548 25.7966 140.711 25.602 140.81 25.3734C140.912 24.9529 140.962 24.5214 140.958 24.0886V20.0637H146V23.987C146 25.601 145.854 27.1419 144.319 28.4978C142.931 29.7439 141.067 30 139.641 30C137.194 30 135.768 29.2316 134.964 28.4978C133.546 27.1785 133.285 25.5278 133.285 23.987V6.01301C133.285 4.47418 133.54 2.82355 134.964 1.50427C135.774 0.77043 137.192 0 139.641 0C141.059 0 142.931 0.256132 144.319 1.50427C145.854 2.86014 146 4.401 146 6.01301V8.47066H140.958Z" fill="#F2F2F2"/>
+<path d="M9.74747 0.365967H4.70355V29.6342H9.74747V13.8231V10.2311V0.365967Z" fill="#F2F2F2"/>
+<path d="M129.195 1.50427C127.805 0.256132 125.942 0 124.518 0C122.069 0 120.645 0.77043 119.841 1.50427C118.423 2.82355 118.159 4.47418 118.159 6.01301V23.987C118.159 25.5278 118.416 27.1785 119.841 28.4978C120.651 29.2316 122.069 30 124.518 30C125.936 30 127.805 29.7439 129.195 28.4978C130.728 27.1419 130.874 25.601 130.874 23.987V6.01301C130.874 4.401 130.728 2.86014 129.195 1.50427ZM125.832 24.0968C125.836 24.5294 125.787 24.9608 125.687 25.3815C125.588 25.6101 125.424 25.8048 125.217 25.9415C125.009 26.0782 124.766 26.1511 124.518 26.1511C124.269 26.1511 124.026 26.0782 123.819 25.9415C123.611 25.8048 123.448 25.6101 123.349 25.3815C123.248 24.9609 123.198 24.5294 123.201 24.0968V5.89511C123.196 5.46299 123.246 5.032 123.349 4.61241C123.604 3.91516 124.078 3.84198 124.518 3.84198C124.957 3.84198 125.431 3.91516 125.687 4.61241C125.789 5.03208 125.838 5.46308 125.832 5.89511V24.0968Z" fill="#F2F2F2"/>
+<path d="M120.005 9.75732H0V13.3513H120.005V9.75732Z" fill="#F2F2F2"/>
+</svg>
+    </div>
+    <div class="profile">
+      <div class="profile__name">Иван Иванов</div>
+      <button class="profile__logout"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.32603 18.5708C7.77836 18.5419 7.2274 18.5603 6.67766 18.5575C5.97711 18.5544 5.61117 18.206 5.61117 17.5377C5.61117 13.8401 5.61117 10.1413 5.61117 6.44127C5.61117 5.78742 5.97711 5.43666 6.66654 5.43198C7.19402 5.42846 7.72191 5.44369 8.24897 5.42573C8.72289 5.41233 9.17209 5.22221 9.49895 4.89668C9.82581 4.57114 10.0039 4.1365 9.9946 3.68719C9.98141 2.76577 9.19637 2.02481 8.20323 2.00763C7.60982 1.99825 7.0164 1.99669 6.42299 2.00763C4.35223 2.05489 2.56457 3.43916 2.10962 5.3437C2.06841 5.5183 2.03626 5.69524 2 5.871V18.1177C2.01566 18.1849 2.03668 18.2509 2.04657 18.3189C2.32226 20.1984 3.99082 21.7639 5.98411 21.9475C6.76709 22.0198 7.56531 22.0049 8.35447 21.9768C9.00352 21.9538 9.48072 21.6038 9.7869 21.0698C10.403 19.9953 9.61218 18.6388 8.32603 18.5708Z" fill="white"/>
+<path d="M16.1544 5.48298C15.8332 5.16078 15.4362 5.00677 14.9842 5.00008C14.6433 4.99689 14.3089 5.09423 14.0227 5.28001C13.7365 5.46579 13.511 5.73182 13.3742 6.04505C13.2377 6.35854 13.1988 6.70602 13.2624 7.04207C13.326 7.37812 13.4892 7.6871 13.7307 7.92861C14.4541 8.66833 15.1837 9.40725 15.9117 10.1434C15.9624 10.1946 16.0087 10.264 16.0861 10.3427H15.7103C13.3934 10.3427 11.0738 10.3333 8.7557 10.3384C7.60157 10.3408 6.79223 11.3511 7.04709 12.4583C7.22616 13.2354 7.94243 13.7766 8.7879 13.7774C11.1272 13.7774 13.4661 13.7695 15.8053 13.7695H16.046C16.0638 13.8028 16.0839 13.8348 16.1061 13.8652C16.0394 13.9046 15.9604 13.9318 15.9098 13.9834C15.2159 14.6739 14.5193 15.362 13.8368 16.0647C13.1692 16.7493 13.1755 17.8041 13.8289 18.4674C14.5047 19.1535 15.5717 19.1874 16.2569 18.5068C18.0175 16.7585 19.7693 15.0012 21.5123 13.235C21.6674 13.0793 21.7902 12.8945 21.8739 12.6911C21.9576 12.4877 22.0004 12.2697 22 12.0496C21.9996 11.8296 21.9558 11.6118 21.8714 11.4087C21.7869 11.2056 21.6633 11.0213 21.5076 10.8662C19.7298 9.06536 17.9454 7.27095 16.1544 5.48298Z" fill="white"/>
+</svg>
+      </button>
+    </div>
+  </div>
+</header><main class="main">
+<div class="bg"><section class="broadcast">
+    <div class="wrapper">
+        <div class="broadcast__frame">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2--PTfwpND0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="broadcast__desc">
+            <div class="broadcast__header">
+                <div class="broadcast__speaker">
+                    <h2>Богослужение</h2>
+                    <div class="name">Армен Асатрян</div>
+                </div>
+
+                <button class="button button_gradient">Пожертвовать</button>
+            </div>
+            <p class="text">Приходилось ли вам в детстве собирать из конструктора сложные модели? В какой-то
+                момент
+                вы двигаетесь вслепую, ничего не понимая, а просто следуя инструкции. Так и в жизни, когда мы не
+                видим полной картины и ничего не понимаем, важно следовать Евангелию. Успех отдельных людей не в
+                том, что они знали больше других, а в том, что они делали то, что знали.</p>
+        </div>
+
+        <div class="broadcast__lastEpisode">
+            <h2 class="broadcast__title">Ранее сегодня</h2>
+            <div class="flex jcsb">
+                <div class="episode">
+                    <div class="episode__preview">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2--PTfwpND0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="episode__desc">
+                        <div class="episode__speaker">
+                            <div class="name">Армен Асатрян</div>
+                            <h2 class="episode__type">Богослужение</h2>
+                        </div>
+                        <div class="episode__time h3">10:00</div>
+                    </div>
+                </div>
+                <div class="episode">
+                    <div class="episode__preview">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2--PTfwpND0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="episode__desc">
+                        <div class="episode__speaker">
+                            <div class="name">Армен Асатрян</div>
+                            <h2 class="episode__type">Богослужение</h2>
+                        </div>
+                        <div class="episode__time h3">10:00</div>
+                    </div>
+                </div>
+                <div class="episode">
+                    <div class="episode__preview">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2--PTfwpND0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="episode__desc">
+                        <div class="episode__speaker">
+                            <div class="name">Армен Асатрян</div>
+                            <h2 class="episode__type">Богослужение</h2>
+                        </div>
+                        <div class="episode__time h3">10:00</div>
+                    </div>
+                </div>
+                <div class="episode">
+                    <div class="episode__preview">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2--PTfwpND0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="episode__desc">
+                        <div class="episode__speaker">
+                            <div class="name">Армен Асатрян</div>
+                            <h2 class="episode__type">Богослужение</h2>
+                        </div>
+                        <div class="episode__time h3">10:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+<section class="days">
+  <div class="wrapper"></div>
+</section></main>
+<footer class="footer">
+  <div class="wrapper">Text in footer</div>
+</footer></div>
+<div class="height-helper"></div>
+<!--		 основной js файл, вебпак вставит сюда сам -->
+<script type="text/javascript" src="build/index.js"></script></body>
+</html>

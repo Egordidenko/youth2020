@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="theme-color" content="#E3FDFD" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Title</title>
+<meta name="description" content="Description" />
+<meta property="og:locale" content="ru_RU" />
+<meta property="og:title" content="Title" />
+<meta property="og:url" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Description" />
+<meta property="og:site_name" content="Title" />
+<meta property="og:image" content="social.jpg" />
+<meta property="og:image:alt" content="Title" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:url" content="social.jpg" />
+<meta property="og:image:secure_url" content="social.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Title" />
+<meta name="twitter:description" content="Description" />
+<meta name="twitter:image" content="social.jpg" />
+<link rel="image_src" href="social.jpg" />
+<link rel="icon" href="ico/32.png" type="image/x-icon" />
+<link rel="shortcut icon" href="ico/32.png" type="image/x-icon" />
+<link rel="apple-touch-icon" href="ico/1024.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="ico/76.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="ico/120.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="ico/152.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="ico/180.png" />
+<!--		height-helper стоит высота 100vh, для того что бы на ios понимать какая высота у экрана без плашек, я использую так же эту высоту что бы не срабатывал ресайз при скролле на ios-->
+<style>
+  .height-helper {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+  	pointer-events: none;
+  	visibility: hidden;
+  }
+</style><!--		 Основной файл стилей, вебпак втавит сюда сам -->
+<link href="build/styles.css" rel="stylesheet"></head>
+<body>
+<div class="pw"><main class="main">
+<section class="login bg">
+  <div class="wrapper">
+    <div class="auth">
+      <div class="logo auth__logo"><svg width="180" height="36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M173.784 10.165v-3.09a5.92 5.92 0 00-.182-1.54c-.315-.837-.899-.925-1.441-.925s-1.127.088-1.441.925a5.963 5.963 0 00-.18 1.54v21.831c-.005.52.056 1.037.18 1.542.121.274.323.508.579.672a1.596 1.596 0 001.723 0c.256-.164.458-.398.58-.672a6.164 6.164 0 00.182-1.542v-4.83H180v4.708c0 1.937-.18 3.786-2.073 5.413-1.711 1.496-4.008 1.803-5.766 1.803-3.017 0-4.775-.922-5.767-1.803-1.748-1.583-2.07-3.564-2.07-5.413V7.216c0-1.847.314-3.828 2.07-5.41C167.393.924 169.141 0 172.161 0c1.748 0 4.055.307 5.766 1.805C179.82 3.432 180 5.281 180 7.215v2.95h-6.216zM12.017.439H5.8v35.122h6.218V.439zM159.282 1.805C157.568.307 155.271 0 153.515 0c-3.019 0-4.775.925-5.766 1.805-1.749 1.583-2.073 3.564-2.073 5.41v21.57c0 1.848.317 3.83 2.073 5.412.999.88 2.747 1.803 5.766 1.803 1.748 0 4.053-.307 5.767-1.803 1.89-1.627 2.07-3.476 2.07-5.413V7.216c0-1.935-.18-3.784-2.07-5.41zm-4.146 27.111a6.26 6.26 0 01-.18 1.542 1.545 1.545 0 01-.579.672 1.599 1.599 0 01-1.724 0 1.545 1.545 0 01-.579-.672 6.26 6.26 0 01-.182-1.542V7.074a6.008 6.008 0 01.182-1.54c.315-.836.899-.924 1.441-.924s1.126.088 1.441.925c.126.503.187 1.02.18 1.54v21.841z" fill="#F2F2F2"/>
+<path d="M147.951 11.709H0v4.313h147.951v-4.313z" fill="#F2F2F2"/>
+</svg>
+      </div>
+      <h1 class="auth__title flex jcc">Вход</h1>
+      <div class="auth__form">
+        <form class="form" method="POST" action="index.html">
+          <div class="ln">
+                    <label class="input-wrapper">
+                      <div class="caption">Электронная почта</div>
+                      <input class="input" type="email" name="email" placeholder="E-mail">
+                      <div class="caption_small">E-mail, который вы указывали при регистрации</div>
+                    </label>
+          </div>
+          <div class="ln">
+                    <label class="input-wrapper">
+                      <div class="caption">Номер платежа</div>
+                      <input class="input" type="text" name="number_id" placeholder="Номер платежа">
+                      <div class="caption_small">Номер платежа указан в письме</div>
+                    </label>
+          </div>
+          <button class="button button-submit">Войти</button>
+        </form>
+      </div>
+    </div>
+    <p class="auth__contact">Возникли проблемы со входом на платформу? <br>Свяжитесь с нами<br><a href="mailto:youth@wolrus.ru">youth@wolrus.ru</a></p>
+  </div>
+</section></main>
+</div>
+<div class="height-helper"></div>
+<!--		 основной js файл, вебпак вставит сюда сам -->
+<script type="text/javascript" src="build/index.js"></script></body>
+</html>
